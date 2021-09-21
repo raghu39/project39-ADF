@@ -96,6 +96,22 @@
 				"typeProperties": {
 					"waitTimeInSeconds": 10
 				}
+			},
+			{
+				"name": "Waitfor5seconds",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "CopyDatafromInput to Output",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
 			}
 		],
 		"annotations": [],
